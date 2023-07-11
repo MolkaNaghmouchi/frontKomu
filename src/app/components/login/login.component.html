@@ -1,0 +1,34 @@
+<div class="surface-50 flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden">
+    <div class="grid justify-content-center p-2 lg:p-0" style="min-width:80%">
+      <div class="col-12 mt-5 xl:mt-0 text-center">
+        <img src="assets/layout/images/themes/logo.png" alt="Sakai logo" class="mb-5" style="width:px; height:60px;">
+      </div>
+      <div class="col-12 xl:col-6" style="border-radius:56px; padding:0.3rem; background: linear-gradient(180deg, var(--primary-color) 10%, rgba(33, 150, 243, 0) 30%);">
+        <div class="surface-50 h-full w-full m-0 py-7 px-4" style="border-radius:53px; background: linear-gradient(180deg, var(--surface-50) 38.9%, var(--surface-0));">
+          <div class="text-center mb-5">
+            <img src="https://scontent.fnbe1-2.fna.fbcdn.net/v/t39.30808-6/271990004_2147906182025254_5853509762142210299_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=174925&_nc_ohc=CduFSP0RgQoAX-qeRt8&_nc_ht=scontent.fnbe1-2.fna&oh=00_AfB1tcNF-oIGcnqO-fColTesi54wVD7NIajIkF9DIMDI6A&oe=64AAB32E"   alt="Image" height="50" class="mb-3">
+            <div class="text-900 text-3xl font-medium mb-3">Welcome {{form.username}}!</div>
+            <span class="text-600 font-medium">Sign in to continue</span>
+          </div>
+          <div class="w-full md:w-10 mx-auto">
+            <label for="user" class="block text-900 text-xl font-medium mb-2">User Name</label>
+
+            <input id="user" type="text" placeholder="user name" [(ngModel)]="form.username" class="w-full mb-3" style="padding:1rem;">
+  
+            <label for="password" class="block text-900 font-medium text-xl mb-2">Password</label>
+            <input id="password" type="password" [(ngModel)]="form.password" placeholder="Password" class="w-full mb-3" style="padding:1rem;">
+  
+            <div class="flex align-items-center justify-content-between mb-5">
+              <div class="flex align-items-center">
+                <p-checkbox id="rememberme1" [(ngModel)]="rememberMe" binary="true" styleClass="mr-2" checked></p-checkbox>
+                <label for="rememberme1">Remember me</label>
+              </div>
+              <a class="font-medium no-underline ml-2 text-right cursor-pointer" style="color: var(--primary-color)">Forgot password?</a>
+            </div>
+            <button pButton pRipple label="Sign In" class="w-full p-3 text-xl" (click)="onSubmit()"></button>
+
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
